@@ -1,0 +1,30 @@
+#Boris 25.03.2025
+
+# Taschenrechner
+
+try:
+    # Steuerung
+    Zahl1 = int(input("1. Zahl eingeben: "))
+    Zahl2 = int(input("2. Zahl eingeben: "))
+    Rechenzeichen = input("Addition? (+), Subtraktion? (-), Multiplikation? (*), Division? (/): ")
+
+    # Ergebnis berechnen
+    if Rechenzeichen == "+":
+        Ergebnis = Zahl1 + Zahl2
+    elif Rechenzeichen == "-":
+        Ergebnis = Zahl1 - Zahl2
+    elif Rechenzeichen == "*":
+        Ergebnis = Zahl1 * Zahl2
+    elif Rechenzeichen == "/":
+        if Zahl2 == 0:
+            Ergebnis = "Fehler: Division durch 0 nicht möglich"
+        else:
+            Ergebnis = Zahl1 / Zahl2
+    else:
+        Ergebnis = "Fehler: Ungültiges Rechenzeichen"
+
+except ValueError:
+    Ergebnis = "Fehler: Bitte geben Sie eine gültige Zahl ein"
+
+# Ergebnis ausgeben
+print("Das Ergebnis ist:", Ergebnis)
